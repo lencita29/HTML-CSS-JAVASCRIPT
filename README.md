@@ -1,1 +1,1 @@
-# Basic_ReactJS--Internship
+# Basics of ReactJS 
