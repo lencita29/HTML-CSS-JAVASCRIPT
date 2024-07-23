@@ -1,2 +1,2 @@
 # HTML-CSS-JAVASCRIPT 
-#Topics Covered during Internship
+Topics Covered during Internship
