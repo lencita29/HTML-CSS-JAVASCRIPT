@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Font and Size Changer</title>
+</head>
+<body>
+    <h1 id="name">My name is Lencita</h1>
+    
+    <!-- Pass the parameter in the function to differentiate the button -->
+    <button onclick="ChangeFont('t')">Times New Roman</button>
+    <!-- Default font style is Times New Roman -->
+    <button onclick="ChangeFont('a')">Arial</button>
+    <button onclick="ChangeFont('c')">Calibri</button>
+
+    <!-- Changing size using a single function -->
+    <button onclick="ChangeSize('p')">+</button>
+    <button onclick="ChangeSize('m')">-</button>
+    <hr><br>
+
+    <script>
+        function ChangeFont(font) {
+            const text = document.getElementById('name');
+            if (font === "t") {
+                text.style.fontFamily = "Times New Roman";
+            } else if (font === "a") {
+                text.style.fontFamily = "Arial";
+            } else {
+                text.style.fontFamily = "Calibri";
+            }
+        }
+
+        function ChangeSize(size) {
+            const text = document.getElementById('name');
+            const currentSize = parseInt(window.getComputedStyle(text).fontSize);
+            
+            if (size === "p") {
+                text.style.fontSize = (currentSize + 2) + "px";
+            } else if (size === "m" && currentSize > 2) {
+                text.style.fontSize = (currentSize - 2) + "px";
+            }
+        }
+    </script>
+</body>
+</html>

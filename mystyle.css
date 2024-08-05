@@ -1,0 +1,52 @@
+body {
+    background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQs4tiB0BExcfAIQ3u889Qk_xVgyHn-o83FEp7voTYACBEhhXSQNUxh98-bTBzikXLyU8c&usqp=CAU');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+
+.container{
+    background-color: brown;
+    color:blanchedalmond;
+}
+.example{
+    background-color: black;
+    color: white;
+}
+
+.container{
+    background-color: brown;
+    color:blanchedalmond;
+    font-size: 20px;
+    font-family: "calibri";
+}
+
+.div1{
+    background-color: blue;
+    color: white;
+    margin: 20px;
+    /* margins for differet sides */
+    margin-bottom: 30px;
+    /* padding inside the bax gap is created */
+    padding: 10px;
+
+}
+.div2{
+    background-color: aqua;
+    color: white;
+    margin: 20px;
+
+}
+.div3{
+    background-color:blueviolet;
+    color: white;
+    margin: 20px;
+}
+
+.parent{
+    display:flex;
+    background-color: aquamarine;
+    
+}
+/* link the css page inside head */

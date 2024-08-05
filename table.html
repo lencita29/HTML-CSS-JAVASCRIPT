@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Multiplication Table Generator</title>
+    <style>
+        /* Add some basic styling */
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 50px;
+        }
+        input, button {
+            padding: 5px;
+            margin: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Multiplication Table Generator</h1>
+    <label for="numberInput">Enter a number:</label>
+    <input type="number" id="numberInput">
+    <input type="number" id="tableInput" placeholder="enter the number of times">
+    <button onclick="generateTable()">Generate Table</button>
+    
+    <div id="result"></div>
+
+    <script>
+        function generateTable() {
+            let numberInput = document.getElementById("numberInput");
+            let resultDiv = document.getElementById("result");
+            let n= document.getElementById("tableInput").value;
+            
+            resultDiv.innerHTML = ''; // Clear previous results
+
+            const number = parseInt(numberInput.value);
+            if (!isNaN(number)) {
+                for (let i = 1; i <= n; i++) {
+                    let r = number * i;
+                    console.log(number + 'X' + i + '='+ r)
+                    //resultDiv.innerHTML += `${number} x ${i} = ${r}<br>`;
+                }
+            } else {
+                resultDiv.innerHTML = 'Please enter a valid number.';
+            }
+        }
+    </script>
+</body>
+</html>

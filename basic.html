@@ -1,0 +1,326 @@
+
+<html lang="en">
+<head>
+    <title>Document</title>
+    <link rel="stylesheet" href="mystyle.css">
+</head>
+<body>
+    <h1> Hello World</h1>
+    <h2> Hello World</h2>
+    <h3> Hello World</h3>
+    <h4> Hello World</h4>
+    <h5> Hello World</h5>
+    <h6> Hello World</h6>
+    <!-- <h7> Hello World</h7> -->
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse magni repellat id amet earum assumenda quae eligendi voluptates praesentium facilis, officia distinctio perspiciatis doloremque vero fuga incidunt culpa dicta dolorum obcaecati autem cupiditate, ratione expedita? Deserunt animi ipsam eligendi tenetur saepe aut nam iste hic adipisci aspernatur, temporibus incidunt exercitationem?</p>
+    <b> this is bold tag</b><br><hr>
+    <strong> this is alternative for bold tag</strong><br>
+
+    <i>this is italics tag</i><br>
+    <em> this is alternative for italics</em><br>
+    <u> undeline tag</u><br>
+    <ins>alternative for underline</ins><br>
+    <mark> marker</mark><br>
+    <br>
+    <h3>attributes</h3>
+    <!-- <img src="https://www.google.com/url?sa=i&url=https%3A%2F%2Fin.pinterest.com%2Fpin%2Fdslr-camera--540291286554933760%2F&psig=AOvVaw055vjgg0UIHOvFT3AkvRZE&ust=1698728576920000&source=images&cd=vfe&opi=89978449&ved=0CBAQjRxqFwoTCNiyopyLnoIDFQAAAAAdAAAAABAD" alt="" height="" width=""> -->
+     <img src="img/camera.jpg" alt="" height="100px" width="200px">
+     <!-- alt iis to write alternative messege if there is any error in the path -->
+     <marquee behavior="alternate" direction="right">Admission open </marquee>
+
+     <!-- LINK TAGS -->
+     <!-- browser link -->
+     <a href="https://www.google.com">Google.com</a>
+     <!-- using local files are in same folder -->
+     <a href="home.html">go to home page</a>
+     <!-- differenr folder -->
+     <!-- <a href="ABCD/home.">go to home page</a> -->
+
+     <!-- ordered lists -->
+     <ol>
+        <li>item 1</li>
+        <li>item 2</li>
+        <li>item 3</li>
+        <li>item 4</li>
+        <li>item 5</li>
+     </ol>
+     <!-- it will give ordered items with numbers1234 -->
+     <!-- if we want o change 1 2 3 to abc or romans -->
+     <ol type="a">
+        <li>item 1</li>
+        <li>item 2</li>
+        <li>item 3</li>
+        <li>item 4</li>
+        <li>item 5</li>
+     </ol>
+
+     <ol type="1" start="5">
+        <li>item 1</li>
+        <li>item 2</li>
+        <li>item 3</li>
+        <li>item 4</li>
+        <li>item 5</li>
+     </ol>
+
+     <!-- unordered list -->
+     <ul>
+            <li>item 1</li>
+            <li>item 2</li>
+            <li>item 3</li>
+            <li>item 4</li>
+            <li>item 5</li>
+     </ul>
+
+     <ul type="square">
+        <li>item 1</li>
+        <li>item 2</li>
+        <li>item 3</li>
+        <li>item 4</li>
+        <li>item 5</li>
+ </ul>
+ <ul type="circle">
+    <li>item 1</li>
+    <li>item 2</li>
+    <li>item 3</li>
+    <li>item 4</li>
+    <li>item 5</li>
+</ul>
+
+
+<!-- forms -->
+<!--  <form action=""></form> action is attribute -->
+<form action="home.html" method="get">   
+    <!-- if i write get method it ia not secured -->
+    <h1>Register</h1>
+    <input type="text">
+</form> -->
+
+<!-- forms with label placeholder and buttons -->
+<form action="home.html" method="post">
+    <h1>Register</h1>
+   Name: <input type="text" name="Myname" placeholder="Enter your name"><br>
+   Phone: <input type="text" name="My number" placeholder="Enter your phone number"><br>
+   email: <input type="text" name="my email" placeholder="Enter your email"><br>
+   
+   <input type="submit" value="Register">
+   <!-- myname my number will bein url path of home page with the values entered  if we use method get. so to secure we use post and go to inspect of hom page ,network,refresh home.html, payload......this is not fully secured .. so we use https-->
+
+</form>
+
+<!-- forms with validation and required -->
+<form action="home.html" method="post" enctype="multipart/form-data">
+    <h1>Register</h1>
+   Name: <input  required title="Enter your name" type="text" name="Myname" placeholder="Enter your name"><br>
+   Phone: <input type="number" name="My number" placeholder="Enter your phone number"><br>
+   email: <input type="email" name="my email" placeholder="Enter your email"><br>
+   <input type="file" name ="File">
+   
+   <input type="submit" value="Register"><hr>
+<!--  required it will not register until we enter data
+ disabled cannot transfer the data , used inside the buttens also -->
+ <!-- IMPORTANT whenver we use file use enctype="multipart/form-data" -->
+ <!-- name is important when we transfer the file -->
+</form>
+
+<!-- input types -->
+ <input type="date" min="2023-10-10" max="2023-10-30"><br><hr>
+
+ <!-- minimum maximum can be used in numbers also -->
+ <input type="number" min="1" max="15"><br><hr>
+
+ <input type="time"><br><hr>
+ <input type="button" value="go back"><br><hr>
+ <!-- submit is to transfer the data -->
+ <input type="checkbox">B.E<br>
+
+<input type="checkbox" value="B.E">B.E
+<input type="checkbox" value="B.E">BCA
+<input type="checkbox" value="B.E">BCOM<br><br>
+<!-- value is transferred,not label -->
+<input type="radio" value="yes">yes
+<input type="radio" value="no">no<br><br>
+<!-- when we select we cannot uncheck .. so both can be selected .. so we use grouping -->
+<input type="radio" name="gender" value="yes">yes
+<input type="radio" name="gender" value="no">no<br><br>
+<hr>
+
+<select>
+   <option value="">Select Course</option>
+   <option value="">B.E</option>
+   <option value="">BCA</option>
+   <option value="">MCA</option>
+   <!-- to disable any option eg: <option value="" disabled>B.E</option> -->
+</select>
+
+<hr>
+<hr>
+<!-- TABLE TAGS -->
+
+<table >
+   <tr>
+      <th>S1 no</th>
+      <th>Student name</th>
+      <th>Student Address</th>
+   </tr>
+</table>
+
+<br>
+<br>
+<!-- with borders -->
+<table border="1">
+   <tr>
+      <th>S1 no</th>
+      <th>Student name</th>
+      <th>Student Phone</th>
+      <th>Student Address</th>
+      <th colspan="2">Total amount</th>
+      <!-- to combine two cells colspan used -->
+   </tr>
+   <tr>
+       <td> 1.</td>
+       <td> Rahul Rikz</td>
+       <td> 987654323</td>
+       <td> Mangalore</td>
+       <td>100</td>
+       <td>200</td>
+   </tr>
+   <tr>
+      <td> 2.</td>
+      <td> Rikita Rah</td>
+      <td> 987654323</td>
+      <td> Bangalore</td>
+  </tr>
+  <tr>
+   <td> 3.</td>
+   <td> RBM</td>
+   <td> 987654323</td>
+   <td> Bantwal</td>
+</tr>
+<!-- <tr>
+   <td colspan="4">GrandTotalAmount</td>
+   <td>100</td>
+   <td>200</td>
+</tr> -->
+<tr>
+   <td colspan="4" rowspan="2">GrandTotalAmount</td>
+   <td>100</td>
+   <td>200</td>
+</tr>
+<tr>
+   <td>100</td>
+   <td>200</td>
+</tr>
+</table>
+
+
+<hr>
+<hr>
+
+
+
+<!-- css -->
+<!-- inline styling -->
+<h1 style="color:red;background-color: blue;"> Hello World</h1><hr>
+
+<!-- internal styling -->
+<!--1. using tagline -->
+<style>
+   h3,h4,h5{
+      color:red;
+      background-color: blue
+   }
+</style>
+<h2> Hello World</h2>
+    <h3> Hello World</h3>
+    <h4> Hello World</h4>
+    <h5> Hello World</h5>
+    <h6> Hello World</h6>
+    <hr>
+
+
+
+<!--2. using . operator and class-->
+<style>
+   .rahul{
+      color:red;
+      background-color: black;
+
+   }
+</style>
+<hr>
+<h2> Hello World</h2>
+    <h3> Hello World</h3>
+    <h4> Hello World</h4>
+    <h5> Hello World</h5>
+    <h6 class="rahul"> Hello World</h6>
+<hr>
+<!-- 3.using id -->
+<!-- should not repeated  -->
+<style>
+   #number{color:red; 
+      background-color: black;}
+</style>
+<ul id="number">
+   <li>item 1</li>
+   <li>item 2</li>
+   <li>item 3</li>
+   <li>item 4</li>
+   <li>item 5</li>
+</ul>
+<hr> 
+
+<!-- External styling create a new file css -->
+
+<p class="container">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Distinctio minus libero fugiat velit expedita nulla illum cumque eaque adipisci asperiores eveniet aperiam, vero accusantium soluta corporis non deserunt explicabo alias?</p>
+<p class="example">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ducimus doloremque laborum commodi, fuga, assumenda quasi provident optio ut vel voluptatum animi hic, inventore eum voluptas soluta fugiat facilis quae ea?</p>
+<!-- link the style sheet in the head -->
+<img src="img/camera.jpg" alt="" height="200px" width="200px" style="border-radius:100%">
+
+<!-- div tags -->
+<div class="parent">
+<div class="div2">
+   Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ad vero distinctio, sunt fugit non animi. Sequi, nesciunt! Est dolor aspernatur adipisci fugiat repudiandae accusantium molestiae, saepe vero quibusdam officiis atque.
+</div>
+
+<div class="div1">
+   Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quibusdam earum necessitatibus, quas nesciunt harum laborum rerum inventore aut quis? Pariatur quas aspernatur vitae iste eveniet, deserunt quo rem eos animi.
+</div>
+
+<div class="div3">
+   Lorem ipsum dolor sit amet consectetur, adipisicing elit. Debitis nesciunt dolore minus reiciendis officiis, itaque quas provident perspiciatis, qui, distinctio facere voluptatibus corrupti nemo exercitationem rerum voluptate. Porro, tempora saepe?
+</div>
+</div>
+<!-- external div tag as parent -->
+<!-- go to external styling -->
+
+<!-- java script -->
+
+<script>
+
+   let a=1;
+   // let a ; is declaration
+   // let a="1" ; string
+   // let a=[]; array
+   // let a={}; object
+   var b=2;
+   const c=3;  
+   // variables
+   // a=100; value of a is changed
+   // b=200; value of b is changed
+   // c=2 ; value cammot be changed and it will give error
+   // const c; without initializing value will give error 
+   console.log(a)
+   console.log(b)
+   console.log(c)
+   //  to run this go to chrome, right click, inspect, console
+</script>
+
+<a href="javascript.html">go to home page</a>
+
+
+
+
+
+</body>
+</html>
+<!-- uniform resource locator(url) -->

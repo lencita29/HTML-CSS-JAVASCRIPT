@@ -1,0 +1,21 @@
+<!-- onchange -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   
+   
+        <h2 id="output"></h2>
+    <input  id="input" type="text" onchange="Change()" placeholder="Enter text here">
+    <script>
+        function Change(){
+            var a=document.getElementById("input").value;
+            document.getElementById("output").innerHTML=a;
+        }
+    </script>
+</body> 
+</html>

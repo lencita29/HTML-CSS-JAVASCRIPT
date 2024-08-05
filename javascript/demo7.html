@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+body {
+text-align: center;
+background-size: cover;
+background-repeat: no-repeat;
+background-position: center;
+}
+#imageInput {
+width: 200px;
+}
+#changeButton {
+padding: 10px 20px;
+font-size: 16px;
+cursor: pointer;
+}
+</style>
+</head>
+<body>
+<h1>Change Background Image</h1>
+<input type="text" id="imageUrl" placeholder="Enter URL">
+<button id="changeButton" onclick="changeBackgroundImage()">Change Image</button>
+<script>
+function changeBackgroundImage() {
+    var image=document.getElementById('imageUrl').value;
+    document.body.style.backgroundImage = "url('" +image + "')";
+}
+//const imageInput = document.getElementById('imageInput');
+//const body = document.body;
+
+//if (imageInput.files && imageInput.files[0]) {
+// const reader = new FileReader();
+// reader.onload = function (e) {
+// body.style.backgroundImage = `url('${e.target.result}')`;
+// };
+// reader.readAsDataURL(imageInput.files[0]);
+// }
+// }
+</script>
+</body>
+</html>

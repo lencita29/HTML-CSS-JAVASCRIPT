@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>This is java script page</title>
+</head>
+<body>
+    <h1 style="text-align:center;">This is Java script page</h1>
+
+    <!-- combining html with javascript -->
+    <button onclick="Click('1')"> Click Here</button>
+    <!-- function has to be written inside script -->
+    <!-- we cannot write "click("")"  it will give error-->
+
+
+    <!-- to access the value inside the element using doc for STATIC VARIABLE -->
+    <h1 id="text">Hello World</h1>
+    <!-- to print this html in the javascript. we have to create id and inside script tag create variable -->
+
+<!-- for dyanmic variables -->
+
+<!-- addition -->
+    <input type="number"  id="amt1" placeholder="Amount 1"> 
+    <!-- //create 2 ids to transfer -->
+    <!-- value attibutre wil store whatever value user enterd will be stored -->
+    <input type="number" id="amt2" placeholder="Amount 2">
+    <!-- when we add this using add button it should print in the console -->
+    <button onclick="Add()">ADD</button>
+    <br>
+    <h2 id="output1">Output: </h2> <hr><br>
+
+<!-- subtraction -->
+    <input type="number"  id="amt3" placeholder="Amount 1"> 
+    <!-- //create 2 ids to transfer -->
+    <!-- value attibutre wil store whatever value user enterd will be stored -->
+    <input type="number" id="amt4" placeholder="Amount 2">
+    <!-- when we add this using add button it should print in the console -->
+    <button onclick="Subtract()">SUB</button>
+    <br>
+    <h2 id="output2">Output: </h2><hr><br>
+
+
+<!-- Multiplication] -->
+
+    <input type="number"  id="amt5" placeholder="Amount 1"> 
+    <!-- //create 2 ids to transfer -->
+    <!-- value attibutre wil store whatever value user enterd will be stored -->
+    <input type="number" id="amt6" placeholder="Amount 2">
+    <!-- when we add this using add button it should print in the console -->
+    <button onclick="Multiply()">MUL</button>
+    <br>
+    <h2 id="output3">Output: </h2><hr><br>
+
+
+<!-- Division -->
+
+    <input type="number"  id="amt7" placeholder="Amount 1"> 
+    <!-- //create 2 ids to transfer -->
+    <!-- value attibutre wil store whatever value user enterd will be stored -->
+    <input type="number" id="amt8" placeholder="Amount 2">
+    <!-- when we add this using add button it should print in the console -->
+    <button onclick="Division()">DIV</button>
+    <br>
+    <h2 id="output4">Output: </h2><hr><br>
+
+
+
+
+
+    <script>
+        function Click(i){
+            alert("You have click on button")
+        }
+
+        let value= document.getElementById("text").innerHTML
+        // value takes the innerHTML of id that is Hello world
+        console.log(value)
+        // taking value from html element(start of a tag anfd closing that tag) and printing 
+
+
+        function Add(){
+            let a= document.getElementById("amt1").value
+            let b= document.getElementById("amt2").value
+            //console.log(a+b)
+            // but javascript takes a and b as string.. to check this  console.log(typeof(a)) . click Add .it will sow string
+            // convert strng to integer .. many methods
+            console.log(+a + +b)
+           document.getElementById('output1').innerHTML=(+a + +b)// bracket is not compulsory
+            //output is reinitialized in the html page by output of add 
+            //document.getElementById('output').innerHTML+=(+a + +b)  concatenate
+           // document.getElementById('output').innerHTML="Output :"+(+a + +b)
+
+        }
+
+
+        function Subtract(){
+            let c= document.getElementById("amt3").value
+            let d= document.getElementById("amt4").value
+            //console.log(c-d)
+            // but javascript takes c and d as string.. to check this  console.log(typeof(c)) . click Add .it will sow string
+            // convert strng to integer .. many methods
+            console.log(+c - +d)
+          // document.getElementById('output2').innerHTML=(+c - +d)// bracket is not compulsory
+            //output is reinitialized in the html page by output of add 
+            //document.getElementById('output2').innerHTML+=(+c - +d)  concatenate
+            document.getElementById('output2').innerHTML="Output :"+(+c - +d)
+
+        }
+
+
+        function Multiply(){
+            let e= document.getElementById("amt5").value
+            let f= document.getElementById("amt6").value
+            //console.log(e*f)
+            // but javascript takes e and f as string.. to check this  console.log(typeof(e)) . click Add .it will sow string
+            // convert strng to integer .. many methods
+            console.log(+e * +f)
+          // document.getElementById('output3').innerHTML=(+e * +f)// bracket is not compulsory
+            //output is reinitialized in the html page by output of multiplication 
+            //document.getElementById('output3').innerHTML+=(+c * +d)  concatenate
+            document.getElementById('output3').innerHTML="Output :"+(+e * +f)
+
+        }
+
+
+        function Division(){
+            let g= document.getElementById("amt7").value
+            let h= document.getElementById("amt8").value
+            //console.log(g/h)
+            // but javascript takes g and h as string.. to check this  console.log(typeof(g)) . click Add .it will sow string
+            // convert strng to integer .. many methods
+            console.log(+g / +h)
+          // document.getElementById('output4').innerHTML=(+g / +h)// bracket is not compulsory
+            //output is reinitialized in the html page by output of division
+            //document.getElementById('output3').innerHTML+=(+g / +h)  concatenate
+            document.getElementById('output4').innerHTML="Output :"+(+g / +h)
+
+        }
+
+
+
+
+
+        let name="Lencita"
+        console.log(name)
+        // go to inspect to see the output
+
+        // let age; console.log(name,age) gives undefined
+
+        let age=20;
+        console.log(name,age)
+        
+        let num1=10;
+        let num2=20;
+        console.log(num1 + num2)
+
+        // let num1="10";
+        // let num2="20";
+        // console.log(num1 + num2)
+        // it will cooncatenate
+
+        let obj={ }   //this is object data type
+        let array=[ ] // this is array data type
+        let array_obj=[{ }]// this is array of object
+        let integer=1 // this is integer data type
+        let string="Hello" // this is string data type
+        let boolean = true// this is boolean data type
+
+        // using alert to print
+
+        // alert("Hello this is java script page")
+        // it will pop up messege
+
+        //functions
+
+        function Hello( value)  //function name first letter capital
+        {
+            //alert("this is hello function "+value) // we can use '' inside alert or we can use backtick ``
+            alert(`this is hello function ${value}`)
+
+        }
+        // function declaration. to get output of this function call the function
+
+        //Hello()
+        // calling the function
+
+        Hello("Rahul")
+
+        //if else statments
+        let a=true;
+        if(a==true){
+            console.log("a is true")
+        }
+        else{
+            console.log("a is false")
+        }
+        // alert pop up ,, console in the inspect
+
+
+
+        let b=10;
+        if(b==10){// if b=="10" it will not check the data type it will just print the same
+        // to check the data type use if(b==="10") triple equation
+            console.log("b is 10")
+        }
+        else if(b==20)
+        {
+            console.log("a is 20")
+        }
+        else{// default condition
+            console.log("b is not 10")
+        }
+
+
+        
+        // for loop
+         
+        for(let i=1;i<=10;i++){
+            console.log("i = "+i)
+          
+        }
+        // print output of table 2
+        for(let i=1;i<=10;i++)
+        {
+            console.log("i = "+2*i)
+
+        }
+        for(let i=1;i<=10;i+=2)
+        {
+            console.log("i = "+i)
+
+        }
+        console.log("end")
+    
+    </script>
+</body>
+</html>
+
+
+<!-- change the bckground color -->
+<!-- skills add .. dynamic page -->
+<!-- enter dob it will givr age -->

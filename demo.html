@@ -1,0 +1,51 @@
+<!-- CSS in javascript -->
+<!-- onclick -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="box">Hello world</h1>
+
+    <!-- onclick -->
+    <p id="box2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat temporibus doloremque id error doloribus hic quasi laborum atque animi dolores consectetur, cum architecto, a quibusdam, pariatur dicta ratione blanditiis aliquam?</p>
+    <button onclick="Hello()">click</button>
+    
+    <hr><img id="flower" src="flower.jpg"  style=" width: 50%; gap: 10px;padding: 10px;justify-content: center; display: flex;">
+    <br>
+    <button onclick="Small()">200px</button>
+    <button onclick="Medium()">400px</button>
+    <button onclick="Big()">600px</button>
+
+
+    
+    <script>
+            var b=document.getElementById("box").style="color:red;background-color:yellow"
+
+
+            function Hello(){
+            var a=document.getElementById("box2").style="font-family:Comic Sans MS"
+
+           }
+
+           function Small(){
+            document.getElementById("flower").style="height:200px; width:200px;"
+           }
+
+           function Medium(){
+            document.getElementById("flower").style="height:400px; width:400px;"
+           }
+
+           function Big(){
+            document.getElementById("flower").style="height:600px; width:600px;"
+           }
+
+           
+
+    </script>
+</body>
+</html>

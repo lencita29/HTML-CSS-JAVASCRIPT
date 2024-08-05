@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+.center {
+text-align: center;
+margin-top: 20vh; /* Vertically center the button */
+}
+.button {
+background-color: darkred;
+color: white;
+padding: 15px 30px;
+font-size: 20px;
+border: none;
+cursor: pointer;
+transition: background-color 0.3s;
+}
+.button:hover {
+background-color: lightcoral;
+}
+.button:active {
+background-color: yellow;
+}
+</style>
+</head>
+<body>
+<div class="center">
+<button id="colorChangeButton" class="button" onclick="changeColor()">Click Me</button>
+</div>
+<script>
+function changeColor() {
+const button = document.getElementById('colorChangeButton');
+button.style.backgroundColor = 'yellow';
+}
+</script>
+</body>
+</html>

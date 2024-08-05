@@ -1,0 +1,135 @@
+<!-- button using sinle function -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="name"> My name is Lencita</h1>
+    <!-- pass the parameter in the function to differentiate button -->
+    <button onclick="ChangeFont('t')">Times New Roman</button>
+    <!-- default fontstyle is times new roman -->
+    <button onclick="ChangeFont('a')">Arial</button>
+    <button onclick="ChangeFont('c')">Calibri</button>
+
+    <!-- changing size ussing single function -->
+    <button onclick="ChangeSize('p')">+</button>
+    <button onclick="ChangeSize('m')">-</button><hr><br>
+
+    <!-- printing each  letter as we type -->
+    <input  id="text2" onkeyup="Type()"  type="text" placeholder=" enter a value"> <br>
+    <h2 id="output2">Output:</h2><hr>
+
+
+    <!--printing each  letter in uppercase as we type  -->
+    <input  id="text3" onkeyup="Type2()"  type="text" placeholder=" enter a value"> <br>
+    <h2 id="output3">Output:</h2><hr>
+
+
+
+    <!-- incrementing number -->
+    <h2 id="text4"> 1</h2>
+    <button onclick="Increase()">+</button>
+
+
+
+    <script>
+
+
+        function ChangeFont(font){
+            // change the font
+            let text = document.getElementById('name')
+            // text.style="background-color:red"
+        // using text variable we can do any stylig of the h1 
+            // text.innerHTML="My name is Sonali"    it changes 
+            console.log(text.style)
+            // information about the styling
+            if (font== "t"){
+                text.style = "font-family: Time New Roman"
+
+            }
+            else if (font== "a"){
+                text.style = "font-family: Arial"
+
+            }
+            else {
+                text.style = "font-family: Calibri"
+
+            }
+
+        }
+
+
+
+        function ChangeSize(size){
+            // increase the font size
+            let abc = document.getElementById('name')
+            if (size== "p")
+            {
+                abc.style = "font-size:20px"
+            }
+            else
+            {
+                abc.style = "font-size= font-size - +1"
+            }
+
+        }
+
+
+        function Type(){
+            // function to print output as we type
+            let a=document.getElementById('text2').value
+            // accesing the value of the input
+            document.getElementById('output2').innerHTML=a
+            //when onchange is used . once we finish typing and after entering it will print
+            // we use onkeyup function
+
+        }
+
+
+        function Type2(){
+            // function to print in uppercase as we type
+            let b=document.getElementById('text3').value
+
+            let c=b.toUpperCase()
+            document.getElementById('output3').innerHTML=c
+
+            //  document.getElementById('output3').innerHTML=b.toUpperCase
+
+            // document.getElementById('output3').innerHTML=b
+            // document.getElementById('output3').style="text-transform:uppercase"
+        }
+
+
+        function Increase()
+        {
+            let k=document.getElementById('text4').innerHTML
+            // value is only used if there is input type
+            let r=parseInt(k)
+            document.getElementById('text4').innerHTML= r+=1
+            // instead of r++ r+=1
+        }
+
+
+        
+        // print the table of 5
+        for(let i=1;i<=10;i++)
+        {
+            console.log("5 X " +i +" = "+5*i)
+
+        }
+
+        console.log("end")
+    
+            
+
+    </script>
+
+</body>
+</html>
+
+
+
+<!-- TASK   create table for the value given by user and upto what -->
+<!-- dynamically fontsize gets inceremented for my name is Lencita -->
+<!-- background color change -->

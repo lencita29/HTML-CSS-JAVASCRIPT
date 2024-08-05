@@ -1,0 +1,31 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        .text{
+            font-size: 24px;
+            padding: 10px;
+            background-color: blueviolet;
+            transition: background-color 0.5s;
+        }
+
+    </style>
+    <title>Transtion</title>
+</head>
+<body>
+    
+    <div class="text" id="myText" onmouseover="changeColor(this)" onmouseout="resetColor(this)">HELLO</div>
+    <script>
+        const colors=['lightblue','lightgreen','lightcoral'];
+        let colorIndex=0;
+        function changeColor(element){
+            element.style.backgroundColor=colors[colorIndex];
+            colorIndex=(colorIndex+1) % colors.length;
+        }
+        function resetColor(element){
+            element.style.backgroundColor='transparent';
+        }
+    </script>
+</body>
+</html>

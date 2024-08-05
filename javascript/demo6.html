@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+body {
+text-align: center;
+}
+#colorInput {
+width: 200px;
+}
+#changeButton {
+padding: 10px 20px;
+font-size: 16px;
+cursor: pointer;
+}
+</style>
+</head>
+<body>
+<h1>Change Background Color</h1>
+<input type="text" id="colorInput" placeholder="Enter a color (e.g., red, #00ff00)">
+<button id="changeButton" onclick="changeBackgroundColor()">Change Color</button>
+<script>
+function changeBackgroundColor() {
+const colorInput = document.getElementById('colorInput');
+document.body.style.backgroundColor = colorInput.value;
+}
+</script>
+</body>
+</html>
